@@ -3368,7 +3368,6 @@
 	                    this["_" + prop] = value;
 	                    callback();
 	                }
-
 	            }
 	        });
 	    }
@@ -3886,7 +3885,9 @@
 	        Omi.extendPlugin('omi-touch',function(dom, instance){
 	            var target = instance.refs[ dom.getAttribute('motionRef')];
 	            var touchInstanceName = dom.getAttribute('touchInstance');
-	            Transform(target, target.getAttribute('perspective') ? false : true);
+
+				Transform(target, target.getAttribute('perspective') ? false : true);
+
 	            var initialValue = dom.getAttribute('initialValue');
 	            if(initialValue){
 	                target[dom.getAttribute('property') || "translateY"] = parseInt(initialValue);
